@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Be My Valentine</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffe6f0;
+      padding: 40px;
+    }
+
+    img {
+      max-width: 400px;
+      border-radius: 15px;
+    }
+
+    h1 {
+      color: #d63384;
+    }
+
+    button {
+      padding: 15px 25px;
+      margin: 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .yes {
+      background-color: #ff4d88;
+      color: white;
+    }
+
+    .no {
+      background-color: #ccc;
+    }
+
+    #message {
+      margin-top: 30px;
+      font-size: 22px;
+      color: #d63384;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="PASTE-YOUR-CANVA-IMAGE-LINK-HERE" alt="Valentine Card">
+
+  <h1>Will you be my Valentine?</h1>
+
+  <button class="yes" onclick="showMessage()">Yes 💕</button>
+  <button class="no" onmouseover="moveButton(this)">No</button>
+
+  <div id="message">
+    I knew you'd say yes. I love you ❤️
+  </div>
+
+<script>
+  function showMessage() {
+    document.getElementById("message").style.display = "block";
+  }
+
+  function moveButton(button) {
+    button.style.position = "absolute";
+    button.style.top = Math.random() * window.innerHeight + "px";
+    button.style.left = Math.random() * window.innerWidth + "px";
+  }
+</script>
+
+</body>
+</html>
